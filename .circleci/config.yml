@@ -21,6 +21,9 @@ jobs:
     docker:
       - image: amazon/aws-cli
     steps:
+      - add_ssh_keys:
+          fingerprints:
+            - "SO:ME:FIN:G:ER:PR:IN:T"
       - checkout
       - run:
           name: Create Cloudformation Stack
